@@ -36,7 +36,7 @@ export const Main: React.FC<MainProps> = ({ route }) => {
     const embedCtrRef = useCallback(
       (el) => {
         const hostUrl = extensionContext?.extensionSDK?.lookerHostData?.hostUrl
-        let id = DashboardConfig[route].defaultId
+        let id = DashboardConfig[route].id
         if (el && hostUrl) {
           el.innerHTML = ''
           LookerEmbedSDK.init(hostUrl)
