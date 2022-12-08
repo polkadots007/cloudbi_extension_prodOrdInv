@@ -52,6 +52,9 @@ export const Main: React.FC<MainProps> = ({ route }) => {
             .on('drillmodal:explore', canceller)
             .on('dashboard:tile:explore', canceller)
             .on('dashboard:tile:view', canceller)
+            .withParams({
+              _theme: '{"show_filters_bar": true,"show_title":true,"background_color":"gray","tile_background_color":"black","tile_text_color":"white","title_color":"white"}'
+            })
             .build()
             .connect()
             .then(setupDashboard)
