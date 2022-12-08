@@ -6,6 +6,7 @@ import {DashboardConfig} from "../shared/DashboardDetails";
 import { EmbedContainer } from "./EmbedDashboard/EmbedContainer";
 import HomePage from "./Home/HomePage";
 import SideBar from "./Sidebar/Sidebar";
+import './Main.css'
 import { MainProps } from "./types";
 
 export const Main: React.FC<MainProps> = ({ route }) => {
@@ -14,6 +15,9 @@ export const Main: React.FC<MainProps> = ({ route }) => {
     const [dashboard, setDashboard] = React.useState<LookerEmbedDashboard>()
     const extensionContext =
       useContext<ExtensionContextData2<Looker40SDK>>(ExtensionContext2)
+    const { extensionSDK } = extensionContext
+    const host = extensionContext?.extensionSDK?.lookerHostData?.hostUrl;
+    const extensionID = extensionContext?.extensionSDK?.lookerHostData?.extensionId;
     
     const isHomePage: boolean = (route === 'home_page')
 
@@ -83,11 +87,11 @@ export const Main: React.FC<MainProps> = ({ route }) => {
  return (
     <>
     {isHomePage ?
-        <HomePage />
+        <HomePage extensionSDK={extensionSDK} host={host} extensionID={extensionID}/>
     :
       <>
-        <div className='embed-components' style={{display:'flex',flexDirection:'row'}}>
-            <SideBar route={route} routeSet={getRoutes(DashboardConfig)}/>
+        <div className='embed-components'>
+            <SideBar route={`/${route}`} routeSet={getRoutes(DashboardConfig)}/>
             <EmbedContainer ref={embedCtrRef} />
         </div>
       </>

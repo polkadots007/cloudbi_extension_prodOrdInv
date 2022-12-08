@@ -1,3 +1,25 @@
 .sidebar {
     width: 300px;
+    background-image: linear-gradient(to right top, #121213, #3c2641, #812e56, #c43949, #eb6712);
+}
+
+li button[aria-selected=true]{
+    background-color: black;
+    color: white;
+}
+
+li button[aria-selected=true] span[class*='TextBase-sc-'] {
+    color: white;
+}
+
+li button:hover {
+    background-color: gray;
+}
+
+li button:hover span[class*='TextBase-sc-'], li button:hover div[class*='ListItemIcon-'] svg {
+    color: white;
+}
+
+li button span[class*='TextBase-sc-'] {
+    color: black;
 }

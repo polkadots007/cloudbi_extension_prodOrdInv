@@ -63,10 +63,17 @@ module.exports = {
         include: /src/,
         sideEffects: false,
       },
+      {
+        test: /\.(scss|css)$/,
+        use: [{loader: 'style-loader'},
+              {loader: 'css-loader', options:{modules:{localIdentName: "[hash:base64]", auto: true}, sourceMap: true}},
+              {loader: 'sass-loader'}]
+      }
     ],
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.js'],
+    extensions: ['.tsx', '.ts', '.js', '.css'],
+    modules: [__dirname, 'node_modules'],
     fallback: { buffer: false },
   },
   devtool: 'source-map',

@@ -3,14 +3,14 @@ import { ArrowBack } from '@styled-icons/material'
 import { Link, LinkProps } from 'react-router-dom'
 import styled from 'styled-components'
 import omit from 'lodash/omit'
-// import './Sidebar.css'
+import './Sidebar.css'
 import React from 'react'
 
 
 const SideBar = ({ route, routeSet }: any) => {
 
     return (
-    <div className='sidebar' style={{width: '300px'}}>
+    <div className='sidebar'>
       <Box display="flex" flexDirection="column">
         <MenuList type="none">
         <StyledRouterLink to={routeSet['Home Page']}>
@@ -25,7 +25,7 @@ const SideBar = ({ route, routeSet }: any) => {
         </StyledRouterLink>
         <StyledRouterLink to={routeSet['Order Line Item - Summary']}>
           <MenuItem selected={route === routeSet['Order Line Item - Summary']}>
-             Order Summary
+             Order Line Item - Summary
           </MenuItem>
         </StyledRouterLink>
         </MenuList>

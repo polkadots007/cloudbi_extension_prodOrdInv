@@ -8,7 +8,7 @@ export const DashboardConfig: any = {
     },
     'order_summary': {
         title: 'Order Line Item - Summary',
-        id: 'cloudbihack22orderline'
+        id: 'cloudbihack22orderlin1'
     },
     defaultUrl: 'home_page'
 }

@@ -1,0 +1,8 @@
+body {
+    margin: 0;
+}
+
+.embed-components{
+    display: flex;
+    flex-direction: row;
+}
