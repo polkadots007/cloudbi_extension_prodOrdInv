@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const EmbedContainer = styled.div`
   width: 100%;
-  height: 95vh;
+  height: 99vh;
   & > iframe {
     width: 100%;
     height: 100%;
