@@ -20,6 +20,6 @@ li button:hover span[class*='TextBase-sc-'], li button:hover div[class*='ListIte
     color: white;
 }
 
-li button span[class*='TextBase-sc-'] {
+li button span[class*='TextBase-sc-'], li button div[class*='ListItemIcon-'] svg {
     color: black;
 }

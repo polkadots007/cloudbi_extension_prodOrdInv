@@ -23,9 +23,9 @@ const SideBar = ({ route, routeSet }: any) => {
              Overview
           </MenuItem>
         </StyledRouterLink>
-        <StyledRouterLink to={routeSet['Order Line Item - Summary']}>
-          <MenuItem selected={route === routeSet['Order Line Item - Summary']}>
-             Order Line Item - Summary
+        <StyledRouterLink to={routeSet['Category Analysis']}>
+          <MenuItem selected={route === routeSet['Category Analysis']}>
+             Category Analysis
           </MenuItem>
         </StyledRouterLink>
         </MenuList>
